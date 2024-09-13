@@ -1,0 +1,125 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимация для заголовка и кнопки */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards; /* Ускорена до 1 секунды */
+}
+
+/* Анимация для кнопки */
+.bot-button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px; /* Скругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.5s; /* Уменьшена задержка */
+}
+
+.bot-button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Обратный градиент при наведении */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Более глубокая тень при наведении */
+}
+
+/* Анимация для информации о магазине */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Ускорена до 1 секунды */
+    animation-delay: 1s; /* Уменьшена задержка */
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666; /* Более светлый цвет текста для контраста */
+}
+
+.about ul {
+    list-style-type: none;
+}
+
+.about li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Улучшаем стиль секции с заголовком */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://easyvape.net/content/uploads/images/pers2-1000x1000.jpg'); /* Замените на нужное изображение */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5); /* Добавляем тень внутрь секции для эффекта затемнения */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Сделаем затемнение немного светлее */
+}
